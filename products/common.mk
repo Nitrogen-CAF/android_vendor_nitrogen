@@ -53,14 +53,11 @@ PRODUCT_COPY_FILES += \
 
 # Extra packages
 PRODUCT_PACKAGES += \
-    Busybox \
-    DaylightHeaderNitrogen \
-    Eleven \
-    LockClock \
-    NitrogenWallpapers \
+    SnapdragonCamera \
+    SnapdragonGallery \
+    SnapdragonMusic \
     Stk \
     Superuser \
-    ThemeInterfacer \
     Terminal
 
 # Include explicitly to work around GMS issues
@@ -69,8 +66,7 @@ PRODUCT_PACKAGES += \
 
 # Superuser
 PRODUCT_COPY_FILES += \
-    vendor/nitrogen/prebuilt/common/superuser/su:root/sbin/su \
-    vendor/nitrogen/prebuilt/common/superuser/init.superuser.rc:root/init.superuser.rc
+    vendor/nitrogen/prebuilt/common/superuser/su:root/sbin/su
 
 # Init.d script support
 PRODUCT_COPY_FILES += \
@@ -83,14 +79,6 @@ PRODUCT_COPY_FILES += \
     vendor/nitrogen/prebuilt/common/addon.d/50-nitrogen.sh:system/addon.d/50-nitrogen.sh \
     vendor/nitrogen/prebuilt/common/bin/backuptool.sh:system/bin/backuptool.sh \
     vendor/nitrogen/prebuilt/common/bin/backuptool.functions:system/bin/backuptool.functions
-
-# DU Utils Library
-PRODUCT_BOOT_JARS += \
-    org.dirtyunicorns.utils
-
-# DU Utils Library
-PRODUCT_PACKAGES += \
-    org.dirtyunicorns.utils
 
 # Nitrogen OTA
 $(call inherit-product-if-exists, vendor/nitrogen/products/ota.mk)
