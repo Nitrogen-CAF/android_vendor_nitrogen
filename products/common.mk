@@ -60,6 +60,13 @@ PRODUCT_PACKAGES += \
     Superuser \
     Terminal
 
+# TCP Connection Management
+PRODUCT_PACKAGES += tcmiface
+PRODUCT_BOOT_JARS += tcmiface
+
+# Bluetooth Audio (A2DP)
+PRODUCT_PACKAGES += libbthost_if
+
 # Include explicitly to work around GMS issues
 PRODUCT_PACKAGES += \
     libprotobuf-cpp-full
